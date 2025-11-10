@@ -6,6 +6,7 @@ import subscriptionRoutes from "./routes/subscriptionRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
 import wishlistRoutes from "./routes/wishlistRoutes.js";
 import cartRoutes from "./routes/cartRoutes.js";
+import contactRoutes from "./routes/contactRoutes.js";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -23,6 +24,7 @@ app.use("/api/subscriptions", subscriptionRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/wishlist", wishlistRoutes);
 app.use("/api/cart", cartRoutes);
+app.use("/api/contact", contactRoutes);
 // Sample Route
 app.get("/", (req, res) => {
   res.send("API is running...");
