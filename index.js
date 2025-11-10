@@ -3,7 +3,9 @@ import connectDB from "./config/db.js";
 import cors from "cors";
 import authRoutes from "./routes/authRoutes.js";
 import subscriptionRoutes from "./routes/subscriptionRoutes.js";
-
+import productRoutes from "./routes/productRoutes.js";
+import wishlistRoutes from "./routes/wishlistRoutes.js";
+import cartRoutes from "./routes/cartRoutes.js";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -18,6 +20,9 @@ connectDB();
 
 app.use("/api/auth", authRoutes);
 app.use("/api/subscriptions", subscriptionRoutes);
+app.use("/api/products", productRoutes);
+app.use("/api/wishlist", wishlistRoutes);
+app.use("/api/cart", cartRoutes);
 // Sample Route
 app.get("/", (req, res) => {
   res.send("API is running...");
